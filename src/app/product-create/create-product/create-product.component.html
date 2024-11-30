@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>{{ isEditMode ? 'Edit Product' : 'Create Product' }}</h2>
+
+<div mat-dialog-content>
+    <form (ngSubmit)="submitForm()">
+        <mat-form-field appearance="fill">
+            <mat-label>Product Name</mat-label>
+            <input matInput [(ngModel)]="product.name" name="name" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Price</mat-label>
+            <input matInput [(ngModel)]="product.price" name="price" type="number" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Category</mat-label>
+            <mat-select [(value)]="product.categoryId" name="categoryName" required>
+                <mat-option *ngFor="let category of categories" [value]="category.id">
+                    {{ category.name }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div mat-dialog-actions>
+            <button mat-button (click)="dialogRef.close()">Cancel</button>
+            <button mat-raised-button color="primary" type="submit">{{ isEditMode ? 'Update' : 'Create' }}</button>
+        </div>
+    </form>
+</div>

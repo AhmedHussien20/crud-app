@@ -1,0 +1,42 @@
+.product-list {
+    padding: 20px;
+  
+    .search-bar {
+      margin-bottom: 20px;
+    }
+  
+    button {
+      margin-bottom: 20px;
+    }
+  
+    .mat-elevation-z8 {
+      width: 100%;
+      margin-top: 20px;
+      border-radius: 4px;
+    }
+  
+    th.mat-header-cell {
+      font-weight: bold;
+      text-align: left;
+    }
+  
+    td.mat-cell {
+      padding: 10px;
+    }
+  
+    .no-products {
+      text-align: center;
+      font-size: 16px;
+      color: #888;
+    }
+    .create-product-button {
+        float: left;
+        margin: 10px; /* Optional margin for spacing */
+      }
+      .grid-container {
+        display: grid;
+        justify-content: end;
+        padding: 10px;
+      }
+  }
+  
